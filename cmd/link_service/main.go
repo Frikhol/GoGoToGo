@@ -1,4 +1,12 @@
-package link_service
+package main
+
+import (
+	"go.uber.org/zap"
+	"link-service/internal/config"
+	"link-service/internal/entrypoint"
+	"link-service/internal/logger"
+	"log"
+)
 
 func main() {
 	// Загрузка конфигурации
