@@ -5,8 +5,10 @@ import (
 	pb "link-service/proto/health_service"
 )
 
+var _ pb.HealthServiceServer = (*HealthHandler)(nil)
+
 type HealthHandler struct {
-	pb.UnimplementedHealthServiceServer
+	//pb.UnimplementedHealthServiceServer
 }
 
 func NewHealthHandler() *HealthHandler { return &HealthHandler{} }
