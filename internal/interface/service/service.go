@@ -1,14 +1,22 @@
 package service
 
-import "context"
+import (
+	"context"
+	"time"
+)
 
 type GetLinkRequest struct {
+	URI string
 }
 
 type GetLinkResponse struct {
+	Link string
 }
 
 type AddLinkRequest struct {
+	Link      string
+	FakeLink  string
+	EraseTime time.Time
 }
 
 type Service interface {
